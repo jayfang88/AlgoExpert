@@ -17,10 +17,10 @@ function branchSums(root) {
     while (stack.length) {
         let temp = stack.pop();
         let node = temp[0]
-        let sum = temp[1];
-        if (!node.right && !node.left) ans.push(node.value + sum);
-        if (node.right) stack.push([node.right, node.value + sum]);
-        if (node.left) stack.push([node.left, node.value + sum]);
+        let prevSum = temp[1];
+        if (!node.right && !node.left) ans.push(node.value + prevSum);
+        if (node.right) stack.push([node.right, node.value + prevSum]);
+        if (node.left) stack.push([node.left, node.value + prevSum]);
     }
 
     return ans;
