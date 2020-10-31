@@ -1,7 +1,8 @@
 // Easy Q
 
-// Time: 
-// Space:
+// Time: O(n)
+// Average Space: O(h)  => h being height of the tree
+// Worst Space: O(n)
 function nodeDepths(root) {
     let sum = 0;
     let stack = [[root, 0]];
