@@ -1,7 +1,7 @@
 // Easy Q
 
-// Time: 
-// Space: 
+// Time: O(n)
+// Space: O(1)
 function findThreeLargestNumbers(array) {
     let l1 = l2 = l3 = -Infinity;
     for (let num of array) {
