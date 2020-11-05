@@ -1,7 +1,7 @@
 // Easy Q
 
 // Time: O(n)   => looks at each element a single time
-// Space: O(1)
+// Space: O(d)  => d is maximum depth for inner array
 function productSum(array, depth=1) {
     let sum = 0;
     for (let el of array) {
@@ -13,6 +13,19 @@ function productSum(array, depth=1) {
     }
 
     return sum * depth;
+}
+
+// Using reduce
+function productSum(array, depth=1) {
+    let s = array.reduce((sum, el) => {
+        if (Array.isArray(el)) {
+            return sum + productSum(el, depth + 1);
+        } else {
+            return sum + el;
+        }
+    }, 0)
+
+    return s * depth;
 }
 
 
