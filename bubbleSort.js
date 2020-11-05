@@ -1,7 +1,7 @@
 // Easy Q
 
-// Time: 
-// Space: 
+// Time: O(n^2)
+// Space: O(1)  => we sort in place
 function bubbleSort(array) {
     let sorted = false;
     while (!sorted) {
