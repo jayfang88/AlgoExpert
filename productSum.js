@@ -1,7 +1,7 @@
 // Easy Q
 
 // Time: O(n)   => looks at each element a single time
-// Space: O(d)  => d is maximum depth for inner array
+// Space: O(d)  => d is maximum depth of deepest array
 function productSum(array, depth=1) {
     let sum = 0;
     for (let el of array) {
