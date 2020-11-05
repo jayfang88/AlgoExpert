@@ -1,9 +1,18 @@
 // Easy Q
 
-// Time: 
-// Space: 
+// Time: O(n^2)
+// Space: O(1)
 function insertionSort(array) {
-    // Write your code here.
+    for (let i = 1; i < array.length; i++) {
+        let curr = i;
+        while (curr > 0 && array[curr] < array[curr-1]) {
+            let temp = array[curr];
+            array[curr] = array[curr-1];
+            array[curr-1] = temp;
+            curr--;
+        }
+    }
+    return array;
 }
 
 
