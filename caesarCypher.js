@@ -1,7 +1,7 @@
 // Easy Q
 
 // Time: O(n)
-// Space:  O(n)
+// Space: O(n)
 function caesarCipherEncryptor(string, key) {
     const alpha = 'abcdefghijklmnopqrstuvwxyz';
 
