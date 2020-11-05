@@ -1,9 +1,18 @@
 // Easy Q
 
-// Time: 
-// Space: 
+// Time: O(n^2)
+// Space: O(1)
 function selectionSort(array) {
-    // Write your code here.
+    for (let i = 0; i < array.length; i++) {
+        let smallestIdx = i;
+        for (let j = i+1; j < array.length; j++) {
+            if (array[j] < array[smallestIdx]) smallestIdx = j;
+        }
+        let curr = array[i];
+        array[i] = array[smallestIdx];
+        array[smallestIdx] = curr;
+    }
+    return array;
 }
 
 
