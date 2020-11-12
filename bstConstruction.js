@@ -1,7 +1,5 @@
 // Medium Q
 
-// Time: 
-// Space: 
 class BST {
     constructor(value) {
         this.value = value;
@@ -9,29 +7,35 @@ class BST {
         this.right = null;
     }
 
+    // Average: O(log(n)) time | O(1) space
+    // Worst: O(n) time | O(1) space
     insert(value) {
+        let curr = this;
         let newNode = new BST(value);
-
-        if (value < this.value) {
-            if (this.left) {
-                this.left.insert(value);
+        while (true) {
+            if (value < curr.value) {
+                if (curr.left) {
+                    curr = curr.left;
+                } else {
+                    curr.left = newNode;
+                    break;
+                }
             } else {
-                this.left = newNode;
-            }
-        } else {
-            if (this.right) {
-                this.right.insert(value);
-            } else {
-                this.right = newNode;
+                if (curr.right) {
+                    curr = curr.right;
+                } else {
+                    curr.right = newNode;
+                    break;
+                }
             }
         }
-
         return this;
     }
 
+    // Average: O(log(n)) time | O(1) space
+    // Worst: O(n) time | O(1) space
     contains(value) {
         let curr = this;
-        
         while (curr) {
             if (value === curr.value) {
                 return true;
