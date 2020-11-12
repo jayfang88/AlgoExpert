@@ -1,6 +1,6 @@
 // Medium Q
 
-// Time: O(n Log(n))
+// Time: O(nLog(n) + mLog(m))
 // Space: O(1)
 function smallestDifference(arrOne, arrTwo) {
     arrOne = arrOne.sort((a,b) => a-b);
